@@ -21,3 +21,12 @@ Route::get('/', function () {
     ]
   ]);
 });
+
+Route::get('/questions/{id}', function ($id) {
+  return Inertia::render('Questions/Show', [
+    'question' => [
+      'id' => $id,
+      'title' => 'Question ' . $id
+    ]
+  ]);
+});
