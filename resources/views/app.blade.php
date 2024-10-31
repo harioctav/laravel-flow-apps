@@ -12,9 +12,10 @@
 
   <!-- Styles / Scripts -->
   @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+  @inertiaHead
 </head>
 <body>
-  <div id="app"></div>
+  @inertia
 
   {{-- <nav class="navbar navbar-expand-lg navbar-laravelflow">
     <div class="container">
