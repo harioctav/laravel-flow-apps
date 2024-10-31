@@ -14,7 +14,9 @@
   @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-laravelflow">
+  <div id="app"></div>
+
+  {{-- <nav class="navbar navbar-expand-lg navbar-laravelflow">
     <div class="container">
       <a class="navbar-brand" href="/"><strong>Stackoverflow</strong>Clone</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -276,6 +278,6 @@
         </div>
       </div>
     </div>
-  </main>
+  </main> --}}
 </body>
 </html>
