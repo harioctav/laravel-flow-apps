@@ -6,10 +6,12 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
+  $questions = QuestionResource::collection(
+    Question::with('user')->latest()->paginate(15)
+  );
+
   return Inertia::render('Questions/Index', [
-    'questions' => QuestionResource::collection(
-      Question::with('user')->latest()->paginate(15)
-    )
+    'questions' => $questions
   ]);
 })->name('questions.index');
 
