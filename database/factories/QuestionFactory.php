@@ -9,15 +9,20 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class QuestionFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
-    {
-        return [
-            //
-        ];
-    }
+  /**
+   * Define the model's default state.
+   *
+   * @return array<string, mixed>
+   */
+  public function definition(): array
+  {
+    return [
+      'title' => $title = rtrim(fake()->realText(50), '.'),
+      'slug' => str($title)->slug(),
+      'body' => fake()->realText(500),
+      'votes_count' => fake()->randomNumber(1),
+      'views_count' => fake()->randomNumber(2),
+      'answers_count' => fake()->randomNumber(1),
+    ];
+  }
 }
