@@ -20,7 +20,7 @@ Route::get('/', function () {
       ]
     ]
   ]);
-});
+})->name('questions.index');
 
 Route::get('/questions/{id}', function ($id) {
   return Inertia::render('Questions/Show', [
@@ -29,4 +29,4 @@ Route::get('/questions/{id}', function ($id) {
       'title' => 'Question ' . $id
     ]
   ]);
-});
+})->name('questions.show');
