@@ -56,4 +56,15 @@ class User extends Authenticatable
   {
     return $this->hasMany(User::class);
   }
+
+  /**
+   * Get the URL of the user's avatar.
+   *
+   * @return string The URL of the user's avatar.
+   */
+  public function avatarUrl(): string
+  {
+    // return "https://www.gravatar.com/avatar/" . hash('sha256', strtolower(trim($this->email)));
+    return "https://avatar.iran.liara.run/public/" . $this->id;
+  }
 }
